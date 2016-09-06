@@ -10,3 +10,27 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.DS_Store
+
+bonita-connector-jms-def/.checkstyle
+
+bonita-connector-jms-def/.classpath
+
+bonita-connector-jms-def/.project
+
+*.prefs
+
+bonita-connector-jms-impl/.project
+
+bonita-connector-jms-impl/.classpath
+
+bonita-connector-jms-impl/.checkstyle
+
+bonita-connector-jms-impl/activemq-data/localhost/KahaDB/db-1.log
+
+bonita-connector-jms-impl/activemq-data/localhost/KahaDB/db.data
+
+bonita-connector-jms-impl/activemq-data/localhost/KahaDB/db.redo
+
+bonita-connector-jms-impl/activemq-data/localhost/KahaDB/lock

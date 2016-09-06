@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>JMSConnector-impl</implementationId>
+  <implementationVersion>1.0</implementationVersion>
+  <definitionId>JMSConnector</definitionId>
+  <definitionVersion>1.0</definitionVersion>
+  <implementationClassname>org.bonitasoft.connectors.jms.JMSConnector</implementationClassname>
+  <hasSources>true</hasSources>
+  <description>The implementation of the JMS Connector.</description>
+  <jarDependencies>
+    <jarDependency>bonita-connector-jms-impl-1.0.jar</jarDependency>
+    <jarDependency>commons-codec-1.6.jar</jarDependency>
+    <jarDependency>commons-io-2.4.jar</jarDependency>
+    <jarDependency>commons-logging-1.0.3.jar</jarDependency>
+    <jarDependency>geronimo-j2ee-management_1.1_spec-1.0.1.jar</jarDependency>
+    <jarDependency>commons-pool2-2.4.2.jar.jar</jarDependency>
+    <jarDependency>activemq-broker-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-broker-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-client-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-jms-pool-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-openwire-legacy-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-pool-5.13.4.jar</jarDependency>
+        <jarDependency>activemq-spring-5.13.4.jar</jarDependency>
+            <jarDependency>geronimo-jms_1.1_spec-1.1.1.jar</jarDependency>
+            <jarDependency>geronimo-jta_1.0.1B_spec-1.0.1.jar</jarDependency>
+                        <jarDependency>hawtbuf-1.11.jar</jarDependency>
+                        <jarDependency>javax.jms-api-2.0.1.jar</jarDependency>
+                                    <jarDependency>xbean-spring-3.18.jar</jarDependency>
+  </jarDependencies>
+</implementation:connectorImplementation>
