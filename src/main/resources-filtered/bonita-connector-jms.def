@@ -4,21 +4,27 @@
     <version>${connector-definition-version}</version> <!-- Version of the definition -->
     <icon>connector.png</icon> <!-- The icon used in the Studio for this definition -->
     <category icon="connector.png" id="Custom"/> <!-- The category of this definition, used in the Studio (e.g: http, script ...) -->
-
-    <!-- Connector inputs -->
-    <input mandatory="true" name="defaultInput" type="java.lang.String"/>
-
-    <!-- Connector outputs -->
-    <output name="defaultOutput" type="java.lang.String"/>
-
-    <!--
-       Pages and widgets to use the connector in the Bonita Studio.
-       - Each widget must be bound to an input
-       - Page titles must be defined in the properties files
-       - Widget labels must be defined in the properties files
-       - Page and widget descriptions can be defined in the properties files (optional)
-    -->
-    <page id="defaultPage">
-        <widget xsi:type="definition:Text" id="defaultInputWidget" inputName="defaultInput"/>
-    </page>
+<input mandatory="true" name="uri" type="java.lang.String"/>
+  <input mandatory="true" name="queueName" type="java.lang.String"/>
+  <input name="message" type="java.lang.String"/>
+  <input name="isBonitaDocument" type="java.lang.Boolean"/>
+  <input name="properties" type="java.util.List"/>
+  <input name="username" type="java.lang.String"/>
+  <input name="password" type="java.lang.String"/>
+  <input name="anonymous" type="java.lang.Boolean"/>
+  <page id="configurationPage">
+    <widget xsi:type="definition:Text" id="uri" inputName="uri"/>
+    <widget xsi:type="definition:Text" id="queueName" inputName="queueName"/>
+	<widget xsi:type="definition:Checkbox" id="anonymous" inputName="anonymous"/>
+	<widget xsi:type="definition:Text" id="username" inputName="username"/>
+	<widget xsi:type="definition:Text" id="password" inputName="password"/>
+  </page>
+  <page id="messagePage">
+    <widget xsi:type="definition:Text" id="messageText" inputName="message"/>
+    <widget xsi:type="definition:Checkbox" id="isDocument" inputName="isBonitaDocument"/>
+    <widget xsi:type="definition:Array" id="properties" inputName="properties" cols="2">
+      <colsCaption>Property name</colsCaption>
+      <colsCaption>Property value</colsCaption>
+    </widget>
+  </page>
 </definition:ConnectorDefinition>
