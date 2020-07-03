@@ -20,7 +20,10 @@
         <connector-definition-version>1.0</connector-definition-version>
         <connector-impl-id>${connector-definition-id}-impl</connector-impl-id>
         <connector-impl-version>${project.version}</connector-impl-version>
-        <connector-main-class>org.bonitasoft.connectors.JmsConnector</connector-main-class>
+        <connector-main-class>org.bonitasoft.connectors.jms.JmsConnector</connector-main-class>
+
+        <activemq.version>5.13.4</activemq.version>
+        <jms.version>2.0.1</jms.version>
 
         <!-- Bonita -->
         <bonita.engine.version>7.11.0</bonita.engine.version>
@@ -50,6 +53,30 @@
             <groupId>org.bonitasoft.engine</groupId>
             <version>${bonita.engine.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>${jms.version}</version>
+        </dependency>
+
+        <!-- Active MQ -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-spring</artifactId>
+            <version>${activemq.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>${activemq.version}</version>
         </dependency>
 
         <!-- Tests -->
@@ -82,6 +109,11 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback-classic.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-kahadb-store</artifactId>
+            <version>${activemq.version}</version>
         </dependency>
 
     </dependencies>
